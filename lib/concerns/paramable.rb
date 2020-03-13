@@ -6,6 +6,3 @@ module Paramable
 end
 
 
-class Song
-  include Paramable
-end
