@@ -4,3 +4,8 @@ module Paramable
     name.downcase.gsub(' ', '-')
   end
 end
+
+
+class Song
+  include Paramable
+end
