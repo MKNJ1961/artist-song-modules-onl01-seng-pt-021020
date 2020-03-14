@@ -1,6 +1,7 @@
 module Memorable
 
-  def reset_all
+  module ClassMethods
+    def reset_all
     self.all.clear
   end
 
@@ -10,10 +11,16 @@ module Memorable
 
 end
 
-class Artist
-  extend Memorable
-end
 
-class Song
-  extend Memorable
+module InstanceMethods
+  def initialize
+    self.class.all  << self
+  end
 end
+# class Artist
+#   extend Memorable
+# end
+# 
+# class Song
+#   extend Memorable
+# end
